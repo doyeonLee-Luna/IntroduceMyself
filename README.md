@@ -12,9 +12,9 @@ This project showcases a basic web application that integrates HTML for the user
 
 Here’s a look at the self-introduction page with the **Friend Request Form**:
 
-![Self-Introduction Page 1](/images/friend1.png)
-![Self-Introduction Page 2](/images/friend2.png)
-![Self-Introduction Page 3](/images/friend3.png)
+![Self-Introduction Page 1](images/freind1.png)
+![Self-Introduction Page 2](images/freind2.png)
+![Self-Introduction Page 3](images/freind3.png)
 
 
 ---

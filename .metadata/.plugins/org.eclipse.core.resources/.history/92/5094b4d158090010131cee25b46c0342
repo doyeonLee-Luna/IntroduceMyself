@@ -1,0 +1,28 @@
+package com.friendapp;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet("/FriendServlet")
+public class FriendServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 폼 데이터 읽기
+        String name = request.getParameter("name");
+        String reason = request.getParameter("reason");
+
+        // 톰캣 콘솔에 출력
+        System.out.println("친구 맺기 요청: ");
+        System.out.println("이름: " + name);
+        System.out.println("친구하고 싶은 이유: " + reason);
+
+        // 응답 출력 (클라이언트 화면에 확인 메시지 표시)
+        response.setContentType("text/html;charset=UTF-8");
+        response.getWriter().println("<h1>친구 맺기 성공!</h1>");
+        response.getWriter().println("<p>이름: " + name + "</p>");
+        response.getWriter().println("<p>친구하고 싶은 이유: " + reason + "</p>");
+    }
+}

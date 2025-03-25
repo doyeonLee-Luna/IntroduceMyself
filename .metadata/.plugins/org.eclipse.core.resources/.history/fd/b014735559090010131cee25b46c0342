@@ -1,0 +1,30 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class FriendServlet extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 폼에서 입력한 값 받기
+        String name = request.getParameter("name");
+        String reason = request.getParameter("reason");
+
+        // 콘솔에 출력 (서버 로그에 남기기)
+        System.out.println("Name: " + name);
+        System.out.println("Reason: " + reason);
+
+        // 응답 처리 (결과를 사용자에게 보여줄 수 있음)
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>You're My Friend!</h1>");
+        out.println("<p>Name: " + name + "</p>");
+        out.println("<p>Reason: " + reason + "</p>");
+        out.println("<a href='index.html'>Go Back</a>");
+        out.println("</body></html>");
+    }
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+E:\URECA\workspace2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4056290876.index
+2365239999.index
+163504650.index
+648297546.index
+2522030054.index
+1280235817.index

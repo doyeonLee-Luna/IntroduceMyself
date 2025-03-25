@@ -1,0 +1,51 @@
+package servlet;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+//HttpServlet 상속
+//doGet() doPost() 재정의
+//....... 규칙
+// ????
+// main() 실행 <= tomcat
+// tomcat 은 어떻게 우리가 작성한 코드를 실행할 수 있는가?
+// Container vs Component <= 양쪽이 서로 미리 약속한 규칙이 존재한다.
+// 우리는 그 규칙대로 coding 을 해야한다. 
+// HttpServlet service() 가 get, post 등 method 를 확인하고 난 뒤 HelloServlet의 doGet, doPost 를 호출한다. 
+@WebServlet("/html")
+public class HtmlServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		System.out.println("Get Request");
+		response.getWriter().append("<html><body><h1>Get</h1></body></html>");
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Post Request");
+		response.getWriter().append("<html><body><h1>Post</h1></body></html>");
+	}
+	
+	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Put Request");
+		response.getWriter().append("<html><body><h1>Put</h1></body></html>");
+	}
+
+
+	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Delete Request");
+		response.getWriter().append("<html><body><h1>Delete</h1></body></html>");
+	}
+
+}

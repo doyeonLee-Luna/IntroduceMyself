@@ -1,0 +1,34 @@
+package com.friendapp;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/friend")
+public class FriendServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    // 친구 맺기 폼에서 POST 요청 처리
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 폼에서 입력된 값 가져오기
+        String name = request.getParameter("name");
+        String reason = request.getParameter("reason");
+
+        // 콘솔에 입력된 값 출력
+        System.out.println("Name: " + name);
+        System.out.println("Reason: " + reason);
+
+        // 응답을 HTML로 반환
+        response.setContentType("text/html");
+        response.getWriter().append("<html><body>");
+        response.getWriter().append("<h1>You're My Friend!</h1>");
+        response.getWriter().append("<p>Name: " + name + "</p>");
+        response.getWriter().append("<p>Reason: " + reason + "</p>");
+        response.getWriter().append("<a href='index.html'>Go Back</a>");
+        response.getWriter().append("</body></html>");
+    }
+}

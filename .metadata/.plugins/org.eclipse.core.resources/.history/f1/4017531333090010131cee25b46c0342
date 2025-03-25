@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>WebBasic index.html</h1>
+	<img src="img/dog3.jpg"><!--  상대경로  -->
+	<img src="/img/dog3.jpg><!--  절대경로  -->
+</body>
+</html>

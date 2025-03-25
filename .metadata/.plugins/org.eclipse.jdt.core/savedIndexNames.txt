@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+E:\URECA\workspace2\.metadata\.plugins\org.eclipse.jdt.core
+648297546.index
+4056290876.index
+1865797976.index
+2365239999.index
+1551938346.index
